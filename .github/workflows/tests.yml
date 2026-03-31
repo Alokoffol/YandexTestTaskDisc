@@ -38,16 +38,19 @@ jobs:
         if: always()
         run: mvn allure:report
 
-      - name: Upload Allure Report
+      - name: Upload Allure Report as Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: target/site/allure-maven-plugin/
 
-      - name: Upload test logs
+      # НОВЫЙ ШАГ: Публикация на GitHub Pages
+      - name: Deploy to GitHub Pages
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: test-logs
-          path: logs/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/site/allure-maven-plugin
+          destination_dir: ./allure-report
+          keep_files: false
