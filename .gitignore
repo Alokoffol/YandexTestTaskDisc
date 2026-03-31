@@ -1,0 +1,78 @@
+# Compiled files
+target/
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Logs
+logs/
+*.log
+
+# Secrets and tokens (ВАЖНО!)
+*.token
+*.secret
+*.key
+*.pem
+application.properties
+config.properties
+secrets.properties
+credentials.yml
+credentials.yaml
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# IDE - Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# IDE - NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+# IDE - VS Code
+.vscode/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+*.bak
+
+# Test reports
+target/surefire-reports/
+target/failsafe-reports/
+target/allure-results/
+target/allure-reports/
+# Allure local installation
+.allure/
