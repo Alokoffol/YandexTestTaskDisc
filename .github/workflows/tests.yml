@@ -1,5 +1,11 @@
 name: Yandex.Disk API Tests
 
+# ДОБАВЛЯЕМ РАЗРЕШЕНИЯ
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 on:
   push:
     branches: [ main, master, develop ]
@@ -45,10 +51,9 @@ jobs:
           name: allure-report
           path: target/site/allure-maven-plugin/
 
-      # НОВЫЙ ШАГ: Публикация на GitHub Pages
       - name: Deploy to GitHub Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./target/site/allure-maven-plugin
