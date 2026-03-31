@@ -104,6 +104,9 @@ cd YandexTestTaskDisc
 # Установить ТОКЕН в переменную окружения
 YANDEX_DISK_TOKEN и ваш токен
 
+```markdown
+> **Для CI/CD:** токен настраивается через GitHub Secrets (см. `.github/workflows/test.yml`)
+
 # Запустить тесты
 mvn clean test
 
